@@ -3,19 +3,51 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16  */
 
-int a;
-int b;
+double a;
+double b;
 
 Console.WriteLine("Enter a number A: ");
-int.TryParse(Console.ReadLine()!, out a);
+double.TryParse(Console.ReadLine()!, out a);
 Console.WriteLine("Enter a number B: ");
-int.TryParse(Console.ReadLine()!, out b);
+double.TryParse(Console.ReadLine()!, out b);
 
 int i;
-int b=1;
+double exp;
 
-for (i=1; i<=a; i++)
+if (b==0)
 {
-    b = i*i*i;
-    Console.WriteLine($"{b} ");
+     if (a==0)
+     {
+          Console.WriteLine($"1 or 0, I'm not a PhD!");
+     }
+     else
+     {
+          exp=1;
+          Console.WriteLine($"Answer: {exp} ");
+     }
+}
+if (b<0)
+{
+     if (a==0)
+     {
+          exp=0;
+     }
+     else
+     {
+          exp=1/a;
+          for (i=1; i<b*-1; i++)
+          {
+               exp =exp*(1/a);
+          }
+     }
+     Console.WriteLine($"Answer: {exp} ");
+}
+if (b>0)
+{
+     exp=a;
+     for (i=1; i<b; i++)
+     {
+          exp=exp*a;
+     }
+     Console.WriteLine($"Answer: {exp} ");
 }
