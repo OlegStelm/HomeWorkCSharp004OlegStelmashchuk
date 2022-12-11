@@ -12,7 +12,7 @@ Console.WriteLine($"");
 for (int j = 0; j < arrayUTF8.Length; j++)
 {
     int b;
-    b = new Random().Next(97, 122);
+    b = new Random().Next(33,127);
     char cb = Convert.ToChar(b);
     arrayUTF8[j] = cb;
     Console.Write($"{arrayUTF8[j]} ");
